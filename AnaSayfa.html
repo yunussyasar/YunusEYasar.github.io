@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yunus Emre Yaşar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="AnaSayfa.html">Ana Sayfa</a>
+            <a href="Hakkimda.html">Hakkımda</a>
+            <a href="Projelerim.html">Projelerim</a>
+        </nav>
+        <br>
+        <header>
+            <h1 style="color: aquamarine;">Hoş Geldiniz!</h1> 
+            <img src="IMG_1185.jpg" alt="Yunus Emre Yaşar" class="profile-img">
+            <h2 style="color: aquamarine;">Yunus Emre Yaşar</h2> <br>
+            <h2 style="color: aquamarine;">Bilgisayar Mühendisliği Öğrencisi</h2> <br>
+            <div style="color: aquamarine;" id="date-time"></div>
+        </header>
+
+
+        <form id="contactForm">
+            <h3 style="color: aquamarine;">İletişim Formu</h3>
+            <label for="name" style="color: aquamarine;">Adınız:</label><br>
+            <input type="text" id="name" name="name" placeholder="Adınızı giriniz" required><br><br>
+
+            <label for="email" style="color: aquamarine;">E-posta:</label><br>
+            <input type="email" id="email" name="email" placeholder="E-posta adresinizi giriniz" required><br><br>
+
+            <label for="message" style="color: aquamarine;">Mesajınız:</label><br>
+            <textarea id="message" name="message" placeholder="Mesajınızı giriniz" required></textarea><br><br>
+
+            <button type="submit">Gönder</button><br>
+            <p id="error-message" style="color: red;"></p>
+        </form>
+
+
+        <div class="social-container">
+            <div class="social-links">
+                <a href="https://twitter.com/your_username" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+                <a href="https://instagram.com/your_username" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+                <a href="https://linkedin.com/in/your_username" target="_blank"><img src="linkedin-2.png" alt="LinkedIn"></a>
+                <a href="https://github.com/your_username" target="_blank"><img src="github.png" alt="GitHub"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerim</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function filterProjects(filter) {
+            const projects = document.querySelectorAll('.project');
+            projects.forEach(project => {
+                if (project.classList.contains(filter)) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+            document.getElementById('projects').style.display = 'block';
+        }
+
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <nav>
+            <a href="AnaSayfa.html">Ana Sayfa</a>
+            <a href="Hakkimda.html">Hakkımda</a>
+            <a href="Projelerim.html">Projelerim</a>
+        </nav>
+        <section>
+            <h1>Projelerim</h1>
+            <div id="project-filters">
+                <button onclick="filterProjects('latest')">En Son Projeler</button>
+                <button onclick="filterProjects('popular')">En Beğenilen Projeler</button>
+            </div>
+            <div id="projects" style="display: none;">
+
+                <div class="project latest">
+                    <h3>Proteus Hesap Makinesi</h3>
+                    <img src="hesap.png" alt="Yeni Proje Fotoğrafı">
+                    <p>AT89C51RC2 mikroişlemcisi kullanılarak yapılan Hesap Makinesi</p>
+                    <button onclick="toggleDetails('detailsNew')">Daha Fazla Gör</button> <br>
+                    <div id="detailsNew" style="display: none;">
+                        <p>Bu proje, Proteus yazılımı kullanılarak AT89C51RC2 mikroişlemcisi ile gerçekleştirilen bir hesap makinesi uygulamasını içermektedir. Proje, temel aritmetik işlemlerini (toplama, çıkarma, çarpma, bölme) gerçekleştirebilen bir hesap makinesi tasarımı üzerine odaklanır. AT89C51RC2 mikroişlemcisi ve Proteus yazılımı kullanılarak, kullanıcı dostu bir arayüz ve verimli işlem kapasitesine sahip bir sistem geliştirilmiştir. Bu proje, mikroişlemci programlamanın temellerini ve uygulama geliştirme sürecini anlamayı amaçlamaktadır..</p>
+                    </div>
+                </div>
+                <div class="project popular">
+                    <h3>Akıllı Asansör Projesi</h3>
+                    <img src="asansor.jpg" alt="Asansör">
+                    <p>Hareket sensörlü asansör</p>
+                    <button onclick="toggleDetails('details2')">Daha Fazla Gör</button> <br>
+                    <div id="details2" style="display: none;">
+                        <p>Günümüzde asansör bulunmayan yapı neredeyse kalmamıştır. Özellikle çok katlı binalarda ve 
+                            hastane gibi asansörün çok sık kullanıldığı yapılarda asansörler sık sık gereksiz yere meşgul 
+                            edilmektedir. Bu durum herkes için zaman kaybı meydana getirmektedir. Özellikle hastanede 
+                            asansör bekleyen hastalar için bu durum daha da büyük bir sorun oluşturmaktadır. Bu projedeki 
+                            amacımız bu zaman kayıplarını engelleyip asansör kullanımını daha seri ve pratik bir hale 
+                            getirmektir.</p>
+                    </div>
+                </div>
+                <div class="project popular">
+                    <h3>AgriScan</h3>
+                    <img src="drone-cekimi.jpg" alt="Drone">
+                    <p>Yapay zeka destekli görüntü işleme teknolojisi.</p>
+                    <button onclick="toggleDetails('details3')">Daha Fazla Gör</button> <br>
+                    <div id="details3" style="display: none;">
+                        <p>Projemiz, çay tarımında kalite kontrolünü optimize eden bir İHA (insansız hava aracı) sistemini tanıtmaktadır. Bu İHA, yüksek çözünürlüklü kamerasıyla çay yapraklarını analiz eder, yapay zekâ destekli sınıflandırma ile kalite kategorilerine ayırır ve verileri kaydeder. Daha düşük maliyetle yüksek kaliteli sonuçlar sunarak geleneksel yöntemlerin maliyet engelini aşmayı amaçlar. Sistemimiz, çay fabrikalarında kaliteyi hızla belirleyip üretimi daha verimli hale getirir ve ihracat potansiyelini artırır. Ayrıca, enerji verimli ve sürdürülebilir bir tarım yöntemi sunar, farklı tarım ürünlerine uyarlanabilir ve genel tarım verimliliğini artırır.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
